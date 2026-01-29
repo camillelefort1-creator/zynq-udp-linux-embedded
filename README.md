@@ -44,7 +44,7 @@ zynq-udp-linux-embedded/
 │   ├── udp_img_receiver.py
 │   └── IHM_microzed/
 │
-└── Image_PetaLinuxSD/
+└── Image_PetaLinux_SD/
 ```
 
 
@@ -57,7 +57,7 @@ zynq-udp-linux-embedded/
 - **UDP server** : serveur UDP de commande (LedOn / LedOff)
 - **UDP sender image** : envoi d’image via UDP vers le PC
 
-📁 Voir `petalinux/`
+Voir `petalinux/`
 
 ---
 
@@ -66,7 +66,7 @@ zynq-udp-linux-embedded/
 - **udp_img_receiver** : réception et reconstruction d’image
 - **IHM_microzed** : interface graphique de contrôle de la carte
 
-📁 Voir `pc/`
+Voir `pc/`
 
 ---
 
@@ -93,5 +93,5 @@ Outils utilisés :
 - Wireshark
 
 Auteur
-Projet réalisé par camille.lefort@etu.univ-grenoble-alpes.fr
-Projet intégrateur — Linux embarqué sur Zynq
+- Projet réalisé par camille.lefort@etu.univ-grenoble-alpes.fr
+- Projet intégrateur — Linux embarqué sur Zynq
