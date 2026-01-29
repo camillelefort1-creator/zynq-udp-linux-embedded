@@ -54,6 +54,7 @@ Voir `pc/`
 
 ## Documentation
 - 📄 [Rapport du projet](docs/Rapport_LEFORT_Projet_integrateur.pdf)
+- 📄 [Présentation](docs/Projet_présentation.pdf)
 - 📄 [Protocole d'utilisation PetaLinux 2014](docs/Protocole_PetaLinux_2014.pdf)
 
 ---
