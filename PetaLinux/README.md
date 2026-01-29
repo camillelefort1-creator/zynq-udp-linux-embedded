@@ -25,7 +25,7 @@ Fichier : `udp_img_server/`
 
 ---
 
-### 2) UDP serveur controle
+### 3) UDP serveur controle
 - Envoi d’une image depuis la carte vers le PC via UDP.
 - Changement état led D3 en fonction de commande UDP.
 - Utilisé avec le script Python IHM côté PC.
