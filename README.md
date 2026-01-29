@@ -50,6 +50,15 @@ zynq-udp-linux-embedded/
 
 ---
 
+## Navigation du projet
+
+- [Documentation (rapport & protocole)](docs/)
+- [Applications Linux embarqué (PetaLinux)](PetaLinux/)
+- [Applications PC](pc/)
+- [Image PetaLinux / Carte SD](Image_PetaLinux_SD/)
+
+---
+
 ## Applications
 
 ### Côté carte (PetaLinux)
