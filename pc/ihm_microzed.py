@@ -1,3 +1,23 @@
+"""
+Interface graphique Python pour piloter une carte MicroZed via UDP.
+Le programme permet :
+- d’envoyer des commandes LedOn / LedOff,
+- demander une image à la carte via UDP,
+- recevoir l’image découpée chunk,
+- reconstruire afficher image.
+
+La structure générale du code (Tkinter + sockets UDP + threads)
+s’inspire d’exemples classiques de communication UDP en Python
+et de l’utilisation de threads pour éviter de bloquer la boucle
+principale Tkinter.
+
+Sources  :
+  https://wiki.python.org/moin/UdpCommunication
+  https://stackoverflow.com/questions/53764958/python-3-udp-packet-send-receive-in-a-tkinter-gui
+
+"""
+
+
 import os
 import socket
 import struct
@@ -228,3 +248,4 @@ if __name__ == "__main__":
     root.geometry("1000x700")
     app = MicroZedGUI(root)
     root.mainloop()
+
