@@ -2,14 +2,13 @@
 
 Projet de communication réseau UDP sur carte **Zynq / MicroZed** sous **PetaLinux 2014**.
 
-Ce projet met en œuvre plusieurs applications Linux embarqué pour piloter la carte et échanger des données PC via Ethernet.
+Ce projet va mettre en oeuvre plusieurs applications Linux pour piloter la carte et échanger des données PC via Ethernet.
 
 ---
 
 ## Objectifs
 - Mettre en place une communication UDP entre un PC et carte Zynq
 - Transmettre une image via UDP depuis la carte vers le PC
-- Développer une IHM PC pour piloter carte
 
 > La partie FPGA / Vivado n’est pas détaillée dans ce dépôt.
 
