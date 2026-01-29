@@ -14,7 +14,7 @@ Ce projet va mettre en oeuvre plusieurs applications Linux pour piloter la carte
 
 ---
 
-## Architecture générale
+## Architecture
 - Carte : Zynq / MicroZed
 - OS embarqué : PetaLinux 2014
 - Réseau : Ethernet (IP statiques)
@@ -63,6 +63,6 @@ Outils utilisés :
 - Python 3
 - Wireshark
 
-Auteur
+
 - Projet réalisé par camille.lefort@etu.univ-grenoble-alpes.fr
 - Projet intégrateur — Linux embarqué sur Zynq
