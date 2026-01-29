@@ -44,7 +44,7 @@ zynq-udp-linux-embedded/
 │   ├── udp_img_receiver.py
 │   └── IHM_microzed/
 │
-└── Peta_linux_Carte_SD/
+└── Image_PetaLinuxSD/
 ```
 
 
