@@ -1,13 +1,13 @@
-import socket      # gestion des sockets réseau (UDP ici)
-import struct      # permet de décoder les données binaires (header)
-import sys         # accès aux arguments ligne de commande
-import time        # mesure du temps de réception
+import socket      
+import struct      
+import sys         
+import time        
 
-# Constantes du protocole (doivent correspondre à l'émetteur C)
+#  correspond au code C
 MAGIC = 0xCAFE
 VERSION = 1
 
-# Format du header (network byte order '!')
+# Format du header
 # H  : uint16  -> magic
 # B  : uint8   -> version
 # B  : uint8   -> flags
@@ -18,11 +18,11 @@ VERSION = 1
 # H  : uint16  -> reserved
 HDR_FMT = "!HBBIHHHH"
 
-# Taille totale du header en octets
+# Taille totale du header octets
 HDR_SIZE = struct.calcsize(HDR_FMT)
 
 def main():
-    # Vérification des arguments
+    # Vérification des arg
     if len(sys.argv) < 3:
         print(f"Usage: {sys.argv[0]} <listen_port> <output_file>")
         print(f"Example: {sys.argv[0]} 50001 reconstructed.jpg")
@@ -31,31 +31,30 @@ def main():
     listen_port = int(sys.argv[1])
     out_path = sys.argv[2]
 
-    # Création de la socket UDP
+    # Création socket UDP
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     # Écoute sur toutes les interfaces réseau
     sock.bind(("0.0.0.0", listen_port))
-    # Timeout pour éviter un blocage infini
-    sock.settimeout(2.0)
+    sock.settimeout(2.0)  # Timeout pour éviter un blocage infini
 
     print(f"Listening UDP on port {listen_port} ...")
 
-    # Variables de gestion de la frame courante
+    # Variables de gestion de la frame 
     current_frame = None      # frame_id en cours
     chunks = {}               # dictionnaire {chunk_id: payload}
     total_chunks = None       # nombre total de chunks attendus
     t0 = None                 # temps de début de réception
 
-    # Boucle principale de réception
-    while True:
+    
+    while True: # réception
         try:
-            # Réception d'un paquet UDP
+            # Réception paquet UDP
             data, addr = sock.recvfrom(2048)  # suffisant pour header + payload
         except socket.timeout:
-            # En cas de timeout, on continue simplement
-            continue
+            
+            continue # En cas de timeout on continue
 
-        # Vérification taille minimale
+        # Vérification taille min
         if len(data) < HDR_SIZE:
             continue
 
@@ -73,7 +72,7 @@ def main():
         if len(payload) != payload_len:
             continue
 
-        # Détection d'une nouvelle frame
+        # Détection une nouvelle frame
         if current_frame is None or frame_id != current_frame:
             current_frame = frame_id
             chunks = {}
@@ -85,7 +84,7 @@ def main():
         if chunk_id not in chunks:
             chunks[chunk_id] = payload
 
-        # Affichage de la progression
+        # Affichage progression
         if total_chunks:
             got = len(chunks)
             if got % 20 == 0 or got == total_chunks:
@@ -110,3 +109,4 @@ def main():
 # Point d'entrée du programme
 if __name__ == "__main__":
     main()
+
