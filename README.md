@@ -84,17 +84,6 @@ Voir `pc/`
 - 📄 [Protocole d'utilisation PetaLinux 2014](docs/Protocole_PetaLinux_2014.pdf)
 
 ---
-
-## Lancement rapide
-
-### Configuration réseau (exemple carte)
-```bash
-ifconfig eth0 192.168.1.50 netmask 255.255.255.0 up
-```
-Exemple : allumer une LED depuis le PC
-```bash
-./send_cmd 192.168.1.50 50000 LedOn
-```
 Outils utilisés :
 - PetaLinux 2014
 - GCC (cross-compilation)
