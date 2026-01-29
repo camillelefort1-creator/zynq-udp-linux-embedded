@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
 #
-#Petit script UDP très basique pour envoyer une commande
-#à un serveur (genre TP réseau / embarqué).
-#
-#Usage:
-#    python3 udp_client.py <ip> <port> <message>
-#
+#Script UDP pour envoyer une commande au serveur
+#python3 udp_client.py <ip> <port> <message>
 #Ex:
 #    python3 udp_client.py 192.168.1.10 50000 LedOn
-#
+
 
 import socket
 import sys
@@ -35,3 +31,4 @@ except Exception as e:
     print("no reply", e)
 
 sock.close()
+
