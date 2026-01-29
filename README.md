@@ -23,32 +23,6 @@ Ce projet va mettre en oeuvre plusieurs applications Linux pour piloter la carte
 
 ---
 
-## Structure du dépôt
-
-```
-zynq-udp-linux-embedded/
-├── README.md
-│
-├── docs/
-│   ├── Rapport_LEFORT_Projet_integrateur.pdf
-│   └── Protocole_PetaLinux_2014.pdf
-│
-├── petalinux/
-│   ├── blinq_led/
-│   ├── udp_server/
-│   └── udp_sender_image/
-│
-├── pc/
-│   ├── send_cmd
-│   ├── udp_img_receiver.py
-│   └── IHM_microzed/
-│
-└── Image_PetaLinux_SD/
-```
-
-
----
-
 ## Navigation du projet
 
 - [Documentation (rapport & protocole)](docs/)
