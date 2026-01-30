@@ -74,8 +74,7 @@ int main(int argc, char **argv)
         hdr.version      = VERSION;
         hdr.flags        = 0;
         hdr.frame_id     = htonl(frame_id);
-        hdr.chunk_id     = htons((uint16_t)
-		);
+        hdr.chunk_id     = htons((uint16_t)chunk_id););
         hdr.total_chunks = htons((uint16_t)total_chunks);
         hdr.payload_len  = htons((uint16_t)r);
 
@@ -96,3 +95,4 @@ int main(int argc, char **argv)
     fclose(f);
     return 0;
 }
+
